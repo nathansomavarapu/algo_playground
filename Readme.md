@@ -1,10 +1,10 @@
 # Playground to Reimplement Algorithms of Interest
 
 ## Current Implementations:
-  * [Heaps](heaps.py)
-  * String Searching - Rabin Karp
-  * Khan's Algorithm for Toplogical Sort
-  * Binary Search
-  * Merge Sort
-  * K-Select
-  * QuickSort
+  * [Heaps](heap.py)
+  * [String Searching - Rabin Karp](string_searching.py)
+  * [Khan's Algorithm for Toplogical Sort](khans_algorithm.py)
+  * [Binary Search](binary_search.py)
+  * [Merge Sort](merge.py)
+  * [K-Select](selection.py)
+  * [QuickSort](selection.py)

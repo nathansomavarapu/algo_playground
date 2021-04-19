@@ -1,7 +1,7 @@
 # Playground to Reimplement Algorithms of Interest
 
 ## Current Implementations:
-  * Heaps
+  * [Heaps](heaps.py)
   * String Searching - Rabin Karp
   * Khan's Algorithm for Toplogical Sort
   * Binary Search

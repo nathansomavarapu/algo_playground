@@ -8,3 +8,6 @@
   * [Merge Sort](merge.py)
   * [K-Select](selection.py)
   * [QuickSort](selection.py)
+  * [Sieve of Eratosthenes](numerical_algorithms.py)
+  * [Fermat's Primality Test](numerical_algorithms.py)
+  * [Euclid's GCD Algorithm](numerical_algorithms.py)

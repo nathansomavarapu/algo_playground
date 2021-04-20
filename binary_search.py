@@ -55,7 +55,30 @@ def binaryRightSearch(arr: list, target: int) -> int:
     
     return l
 
-class TestSelection(unittest.TestCase):
+class TreeNode:
+
+    def __init__(self, val: int, left: 'TreeNode' = None, right: 'TreeNode' = None) -> None:
+        self.val = val
+        self.left = left
+        self.right = right
+    
+    def __repr__(self) -> list:
+
+        traversal = []
+
+        def inorder_traversal(node: 'TreeNode') -> None:
+
+            if node is None:
+                return
+
+            inorder_traversal(node.left)
+            traversal.append(node.val)
+            inorder_traversal(node.right)
+        
+        inorder_traversal(self)
+        return str(traversal)
+
+class TestSearch(unittest.TestCase):
 
     def test_select_left(self):
         arr = sorted(list(np.random.randint(0, 100, size=(10))))

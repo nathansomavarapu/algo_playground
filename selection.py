@@ -2,7 +2,7 @@ import random
 import unittest
 import numpy as np
 
-from typing import Tuple
+from typing import Tuple, List
 
 def swap(arr: list, i: int, j: int):
     """Swap elements i and j by reference
@@ -66,6 +66,33 @@ def kSelect(arr: list, k: int) -> int:
     else:
         return arr[pivot_index]
 
+def select_iterative(arr: List[int], k: int) -> int:
+    left = 0
+    right = len(arr)
+
+    while True:
+
+        pivot_idx = random.randint(left, right-1)
+        pivot = arr[pivot_idx]
+        arr[right-1], arr[pivot_idx] = arr[pivot_idx], arr[right-1]
+        pivot_idx = right-1
+
+        free = left
+        for i in range(left, right):
+            v = arr[i]
+            if v < pivot:
+                arr[i], arr[free] = arr[free], arr[i]
+                free += 1
+        
+        arr[pivot_idx], arr[free] = arr[free], arr[pivot_idx]
+
+        if k == free:
+            return arr[free]
+        if k > free:
+            left = free + 1
+        if k < free:
+            right = free    
+
 def quicksort(arr: list) -> list:
     """Take in a list and sorts it using quicksort. The pivots are chosen
     randomly each time. The algorithm runs in place.
@@ -106,4 +133,11 @@ class TestSelection(unittest.TestCase):
 
         self.assertEqual(quicksort(arr), sorted(arr))
 
-unittest.main()
+# unittest.main()
+
+arr = [41,2,3,6,12,5,10]
+s_arr = sorted(arr)
+true_val = s_arr[5]
+for _ in range(10000):
+    select_val = select_iterative(arr, 5)
+    assert select_val == true_val

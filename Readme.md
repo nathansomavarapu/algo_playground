@@ -11,3 +11,5 @@
   * [Sieve of Eratosthenes](numerical_algorithms.py)
   * [Fermat's Primality Test](numerical_algorithms.py)
   * [Euclid's GCD Algorithm](numerical_algorithms.py)
+  * [Trie](trie.py)
+  * [BST](bst.py)

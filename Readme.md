@@ -13,3 +13,4 @@
   * [Euclid's GCD Algorithm](numerical_algorithms.py)
   * [Trie](trie.py)
   * [BST](bst.py)
+  * [Fenwick Tree](fenwick_tree.py)
